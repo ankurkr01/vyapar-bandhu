@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
           <a class="nav-link active" aria-current="page" href="#">Packages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/service">Services</a>
+          <Link to='/service' className='nav-link'>Services</Link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Templates</a>
