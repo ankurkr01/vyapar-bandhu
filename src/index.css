@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.card1 {
+    transition: all ease 0.3s;
+}
+
+.card1:hover {
+    transform: scale(1.1);
+}
+
+.card2 {
+    transition: all ease 0.3s;
+}
+
+.card2:hover {
+    transform: scale(1.2);
+}
+
+header {
+    background: url('https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    flex: 1;
+    padding: 0 20px;
+}
