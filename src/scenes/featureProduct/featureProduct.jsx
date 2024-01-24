@@ -63,7 +63,7 @@ const HomeBanner = () => {
     const dispatch = useDispatch();
     // const navigate = useNavigate()
 
-    const { featuredproduct,isUploaded ,isDeleted} = useSelector((state) => state.featuredproduct)
+    const { featuredproduct, isUploaded, isDeleted } = useSelector((state) => state.featuredproduct)
 
     const [imagePreview, setImagePreview] = useState([])
     const [bimagePreview, setBImagePreview] = useState([])
@@ -190,10 +190,9 @@ const HomeBanner = () => {
 
             <Box display="flex" justifyContent="end" mt="20px">
 
-                {featuredproduct?.length<3?<><Button color="secondary" variant="contained" onClick={handleClickOpen}>
-                    Add Product
-                </Button></>:<></>}
-            </Box>
+                <Button color="secondary" variant="contained" onClick={handleClickOpen}>
+                    Add Services
+                </Button>            </Box>
 
 
 
@@ -203,7 +202,7 @@ const HomeBanner = () => {
                 open={open}
             >
                 <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-                    Add Product
+                    Add Services
                 </DialogTitle>
                 <IconButton
                     aria-label="close"
@@ -235,7 +234,7 @@ const HomeBanner = () => {
                                 name="name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                placeholder="Product Name"
+                                placeholder="Service Name"
                             />
                             <TextField
                                 required
@@ -246,33 +245,61 @@ const HomeBanner = () => {
                                 onChange={(e) => setDescription(e.target.value)}
                                 placeholder="Description"
                             />
+                            <TextField
+                                required
+                                id="outlined-required"
+                                label="Required"
+                                name="description"
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                                placeholder="Heading 1"
+                            />
+                            <TextField
+                                required
+                                id="outlined-required"
+                                label="Required"
+                                name="description"
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                                placeholder="Content 1"
+                            />
+                            <Button component="label" variant="contained" startIcon={<CloudUploadIcon />}>
+                                Image 1
+                                <VisuallyHiddenInput type="file" name="profileImage" onChange={BannerImageChange} />
+
+                            </Button>
+
+
 
                             <TextField
                                 required
                                 id="outlined-required"
                                 label="Required"
-                                type="Number"
-                                name="price"
-                                value={price}
-                                onChange={(e) => setPrice(e.target.value)}
-                                placeholder="Price"
+                                name="description"
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                                placeholder="Heading 2"
                             />
+                            <TextField
+                                required
+                                id="outlined-required"
+                                label="Required"
+                                name="description"
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                                placeholder="Content 2"
+                            />
+                            <Button component="label" variant="contained" startIcon={<CloudUploadIcon />}>
+                                Image 2
+                                <VisuallyHiddenInput type="file" name="profileImage" onChange={BannerImageChange} />
+
+                            </Button>
                         </div>
-                        <p>Images Should be less than 350kb</p>
                     </Box>
 
 
 
-                    <Button component="label" variant="contained" startIcon={<CloudUploadIcon />}>
-                        Upload Profile Image
-                        <VisuallyHiddenInput type="file" name="profileImage" onChange={BannerImageChange} />
 
-                    </Button>
-                    <Button component="label" variant="contained" startIcon={<CloudUploadIcon />}>
-                        Upload Background Image
-                        <VisuallyHiddenInput type="file" name="backgroundImage" onChange={backgroundImage} />
-
-                    </Button>
 
                     <div id="BannerImage">
 
@@ -297,13 +324,14 @@ const HomeBanner = () => {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Profile</TableCell>
+                            <TableCell>Name</TableCell>
                             <TableCell align="center">Background</TableCell>
-                            <TableCell align="right">Name</TableCell>
-                            <TableCell align="right">Description</TableCell>
-                            <TableCell align="right">Price</TableCell>
-                            <TableCell align="right">Upload Background</TableCell>
-                            <TableCell align="right">Delete</TableCell>
+                            <TableCell align="right">Heading1</TableCell>
+                            <TableCell align="right">content1</TableCell>
+                            <TableCell align="right">image1</TableCell>
+                            <TableCell align="right">Heading2</TableCell>
+                            <TableCell align="right">conyent2</TableCell>
+                            <TableCell align="right">image2</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
