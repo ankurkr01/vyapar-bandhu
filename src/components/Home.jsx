@@ -34,6 +34,9 @@ const Home = () => {
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
+        <li class="nav-item">
+          <Link to='/admin' className='nav-link'>Admin</Link>
+        </li>
 
       </ul>
       <form class="form-inline my-2 my-lg-0  ">
